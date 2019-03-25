@@ -1,36 +1,70 @@
-fbidata{
-	display:block;
-	background-color:lightsteelblue;
+fbidata {
+  display: block;
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
 }
 
-fbidata > header{
-    background: white;
-    display: block;
+fbidata>header {
+  background: white;
+  display: block;
+  padding: 20px;
 }
 
-header > logo{
-	
-	display: block;
-    width: 600px;
-    height: 350px;
-    background: url(logogus.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 600px 350px;
-    visibility: visible;
-	margin-left: auto;
-	margin-right: auto;
+header>logo {
+  display: block;
+  width: 55%;
+  height: 240px;
+  background: url(logogus.jpg);
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-person[personid="1"]{
+/* person[personid="1"] {
   background-color: lightgrey;
   width: 300px;
   border: 25px solid green;
   padding: 25px;
   margin: 25px;
+} */
+
+data {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0;
+  display: block;
+  background: white;
 }
 
-data{
-	display: none
+person {
+  display: block;
+  border: 2px solid #b2cc33;
+  border-radius: 5px;
+}
+
+houses, phones, emails, creditcards, business, products {
+  display: none
+}
+
+people {
+  display: block;
+}
+
+administrators {
+  display: block;
+  color: #ffffff;
+  background: #342f69;
+  text-align: center;
+  height: 70px;
+}
+
+copyright {
+  display: block;
+  padding: 5px;
+}
+
+admin {
+  display: block;
 }
