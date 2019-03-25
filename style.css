@@ -40,8 +40,55 @@ data {
 
 person {
   display: block;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 2px solid #b2cc33;
   border-radius: 5px;
+}
+
+firstname::before, middlename {
+  content: "pierwsze imię: ";
+  display: inline;
+}
+
+person>* {
+  margin-left:700px;
+  display: block;
+}
+
+middlename::before {
+  content: "drugie imię: ";
+  display: inline;
+}
+
+lastname::before {
+  content: "nazwisko: ";
+  display: inline;
+}
+
+birthday::before {
+  content: "data urodzenia: ";
+  display: inline;
+}
+
+physicalcharacteristics>* {
+  display: block;
+}
+
+growthinmeters::before {
+  content: "wzrost: ";
+  display: inline;
+}
+
+weightinkilograms::before {
+  content: "waga: ";
+  display: inline;
+}
+
+position::before {
+  content: "stanowisko: ";
+  display: inline;
 }
 
 houses, phones, emails, creditcards, business, products {
@@ -68,3 +115,5 @@ copyright {
 admin {
   display: block;
 }
+
+*/
