@@ -48,7 +48,7 @@ person>*:not(firstname):not(middlename) {
 
 firstname::before {
   margin-left: 650px;
-  content: "imiona: ";
+  content: "Imiona: ";
   display: inline;
   font-weight: bold;
 }
@@ -60,13 +60,13 @@ middlename::before {
 }
 
 lastname::before {
-  content: "nazwisko: ";
+  content: "Nazwisko: ";
   display: inline;
   font-weight: bold;
 }
 
 birthday::before {
-  content: "data urodzenia: ";
+  content: "Data urodzenia: ";
   display: inline;
   font-weight: bold;
 }
@@ -76,19 +76,30 @@ physicalcharacteristics>* {
 }
 
 growthinmeters::before {
-  content: "wzrost: ";
+  content: "Wzrost: ";
   display: inline;
   font-weight: bold;
+}
+
+
+growthinmeters::after {
+  content: " m";
+  display: inline;
 }
 
 weightinkilograms::before {
-  content: "waga: ";
+  content: "Waga: ";
   display: inline;
   font-weight: bold;
 }
 
+weightinkilograms::after {
+  content: " kg";
+  display: inline;
+}
+
 position::before {
-  content: "stanowisko: ";
+  content: "Stanowisko: ";
   display: inline;
   font-weight: bold;
 }
