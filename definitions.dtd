@@ -9,7 +9,7 @@
 		<!ELEMENT people (person*)>
 			<!ELEMENT person (firstname,middlename?,lastname,birthday,physicalcharacteristics?,work?)>
 				<!ATTLIST person personid ID #REQUIRED>
-				<!ATTLIST person house IDREF #REQUIRED>
+				<!ATTLIST person house IDREF #IMPLIED>
 				
 				<!ELEMENT firstname (#PCDATA)>
 				<!ELEMENT middlename (#PCDATA)>
@@ -21,7 +21,7 @@
 					<!ELEMENT weightinkilograms (#PCDATA)>
 				
 				<!ELEMENT work (position*)>
-				<!ATTLIST work companyid ID #REQUIRED>
+				<!ATTLIST work companyid IDREF #REQUIRED>
 					<!ELEMENT position (#PCDATA)>
 				
 		<!ELEMENT houses (house*)>
@@ -39,12 +39,12 @@
 		<!ELEMENT phones (phone*)>
 			<!ELEMENT phone (#PCDATA)>
 			<!ATTLIST phone phoneid ID #REQUIRED>
-			<!ATTLIST phone ownerid IDREF #REQUIRED>
+			<!ATTLIST phone ownerid IDREF #IMPLIED>
 
 		<!ELEMENT emails (email*)>
 			<!ELEMENT email (emailaddress,password,creationdate)>
 			<!ATTLIST email emailid ID #REQUIRED>
-			<!ATTLIST email ownerid IDREF #REQUIRED>
+			<!ATTLIST email ownerid IDREF #IMPLIED>
 				<!ELEMENT emailaddress (#PCDATA)>
 				<!ELEMENT password (#PCDATA)>
 				<!ELEMENT creationdate (#PCDATA)>
@@ -52,7 +52,7 @@
 		<!ELEMENT creditcards (card*)>
 			<!ELEMENT card (issuer,number,expires)>
 			<!ATTLIST card cardid ID #REQUIRED>
-			<!ATTLIST card ownerid IDREF #REQUIRED>
+			<!ATTLIST card ownerid IDREF #IMPLIED>
 				<!ELEMENT issuer (#PCDATA)>
 				<!ELEMENT number (#PCDATA)>
 				<!ELEMENT expires (#PCDATA)>
@@ -65,7 +65,7 @@
 		<!ELEMENT products (product*)>
 			<!ELEMENT product (#PCDATA)>
 			<!ATTLIST product productid ID #REQUIRED>
-			<!ATTLIST product companyid IDREF #REQUIRED>
+			<!ATTLIST product companyid IDREF #IMPLIED>
 	
 	<!ELEMENT administrators (copyright, admin+)>
 		<!ELEMENT copyright (#PCDATA)>
