@@ -7,7 +7,7 @@
    </header>
    <data>
       <people>
-         <person personid="p1" house="h19">
+         <person personid="p1" >
             <firstname>Whitney</firstname>
             <middlename>Aubrie</middlename>
             <lastname>Peterson</lastname>
