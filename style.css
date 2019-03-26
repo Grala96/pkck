@@ -311,25 +311,29 @@ phones::before {
   font-size: 30px;
   margin-left: auto;
   margin-right: auto;
-  list-style-type: circle;
-  /* display: block; */
 }
 
-/* phones>*:not(phone[phoneid="tel1"]):not(phone[phoneid="tel2"] ){
-  display: none
-} */
+phones {
+  list-style-type: none;
+  display: inline-block;
+}
+
+phones>*{
+  display: none;
+}
 
 phone[phoneid="tel1"] {
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
-  list-style-type: circle;
+  display: list-item;
 }
 
 phone[phoneid="tel2"] {
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
+  display: list-item;
 }
 
 administrators {
