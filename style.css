@@ -2,7 +2,7 @@ fbidata {
   display: block;
   background-color: white;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 fbidata>header {
@@ -21,14 +21,6 @@ header>logo {
   margin-right: auto;
 }
 
-/* person[personid="1"] {
-  background-color: lightgrey;
-  width: 300px;
-  border: 25px solid green;
-  padding: 25px;
-  margin: 25px;
-} */
-
 data {
   width: 1000px;
   margin-left: auto;
@@ -45,31 +37,38 @@ person {
   margin-bottom: 20px;
   border: 2px solid #b2cc33;
   border-radius: 5px;
+  height: 300px;
+  width: 100%;
 }
 
-firstname::before, middlename {
-  content: "pierwsze imię: ";
-  display: inline;
-}
-
-person>* {
-  margin-left:700px;
+person>*:not(firstname):not(middlename) {
+  margin-left: 650px;
   display: block;
 }
 
-middlename::before {
-  content: "drugie imię: ";
+firstname::before {
+  margin-left: 650px;
+  content: "imiona: ";
   display: inline;
+  font-weight: bold;
+}
+
+middlename::before {
+  content: " ";
+  display: inline;
+  font-weight: bold;
 }
 
 lastname::before {
   content: "nazwisko: ";
   display: inline;
+  font-weight: bold;
 }
 
 birthday::before {
   content: "data urodzenia: ";
   display: inline;
+  font-weight: bold;
 }
 
 physicalcharacteristics>* {
@@ -79,24 +78,258 @@ physicalcharacteristics>* {
 growthinmeters::before {
   content: "wzrost: ";
   display: inline;
+  font-weight: bold;
 }
 
 weightinkilograms::before {
   content: "waga: ";
   display: inline;
+  font-weight: bold;
 }
 
 position::before {
   content: "stanowisko: ";
   display: inline;
+  font-weight: bold;
 }
 
-houses, phones, emails, creditcards, business, products {
+person[personid="1"] {
+  background: url("img/person1.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="2"] {
+  background: url("img/person2.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="3"] {
+  background: url("img/person3.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="4"] {
+  background: url("img/person4.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="5"] {
+  background: url("img/person5.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="6"] {
+  background: url("img/person6.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="7"] {
+  background: url("img/person7.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="8"] {
+  background: url("img/person8.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="9"] {
+  background: url("img/person9.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="10"] {
+  background: url("img/person10.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="11"] {
+  background: url("img/person11.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="12"] {
+  background: url("img/person12.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="13"] {
+  background: url("img/person13.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="14"] {
+  background: url("img/person14.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="15"] {
+  background: url("img/person15.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="16"] {
+  background: url("img/person16.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="17"] {
+  background: url("img/person17.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="18"] {
+  background: url("img/person18.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="19"] {
+  background: url("img/person19.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="20"] {
+  background: url("img/person20.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="22"] {
+  background: url("img/person22.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="21"] {
+  background: url("img/person21.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="23"] {
+  background: url("img/person23.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+person[personid="24"] {
+  background: url("img/person24.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="25"] {
+  background: url("img/person25.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="26"] {
+  background: url("img/person26.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="27"] {
+  background: url("img/person27.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="28"] {
+  background: url("img/person28.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="29"] {
+  background: url("img/person29.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+person[personid="30"] {
+  background: url("img/person30.jpg");
+  background-position: 10% 50%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+houses, emails, creditcards, business, products {
   display: none
 }
 
-people {
-  display: block;
+phones::before {
+  content: "Infolinia: ";
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: circle;
+  /* display: block; */
+}
+
+/* phones>*:not(phone[phoneid="1"]):not(phone[phoneid="2"] ){
+  display: none
+} */
+
+phone[phoneid="1"] {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: circle;
+}
+
+phone[phoneid="2"] {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 administrators {
@@ -105,6 +338,7 @@ administrators {
   background: #342f69;
   text-align: center;
   height: 70px;
+  font-size: 16px;
 }
 
 copyright {
@@ -115,5 +349,3 @@ copyright {
 admin {
   display: block;
 }
-
-*/
