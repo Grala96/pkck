@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="style.css" ?>
-<fbidata>
+<!DOCTYPE database SYSTEM "definitions.dtd">
+<database>
    <header>
       <logo/>
    </header>
    <data>
       <people>
-         <person personid="1" house="19" photo="Peterson.jpg">
+         <person personid="1" house="19">
             <firstname>Whitney</firstname>
             <middlename>Aubrie</middlename>
             <lastname>Peterson</lastname>
@@ -1076,4 +1077,4 @@
          <index>210355</index>
       </admin>
    </administrators>
-</fbidata>
+</database>
