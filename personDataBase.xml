@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="style.css" ?>
 <!-- <!DOCTYPE database SYSTEM "definitions.dtd"> -->
-<database  xmlns="https://www.w3schools.com"
+<database  xmlns="https://www.PKCK_dw_gg.com"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
 
    <logo/>
    <data>
       <people>
-         <person personid="p1" >
+         <person personid="p1">
             <firstname>Whitney</firstname>
             <middlename>Aubrie</middlename>
             <lastname>Peterson</lastname>
