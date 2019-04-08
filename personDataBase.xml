@@ -2,9 +2,7 @@
 <?xml-stylesheet type="text/css" href="style.css" ?>
 <!DOCTYPE database SYSTEM "definitions.dtd">
 <database>
-   <header>
-      <logo/>
-   </header>
+   <logo/>
    <data>
       <people>
          <person personid="p1" house="h19">
@@ -13,8 +11,8 @@
             <lastname>Peterson</lastname>
             <birthday>21 December 1983</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.84</growthinmeters>
-               <weightinkilograms>83.1</weightinkilograms>
+               <growthinmeters heightUnit="m">1.84</growthinmeters>
+               <weightinkilograms weightUnit="kg">83.1</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co3">
                <position>Production Manager</position>
@@ -26,8 +24,8 @@
             <lastname>Flores</lastname>
             <birthday>04 April 1995</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.73</growthinmeters>
-               <weightinkilograms>84.6</weightinkilograms>
+               <growthinmeters heightUnit="m">1.73</growthinmeters>
+               <weightinkilograms weightUnit="kg">84.6</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co11">
                <position>Supervisor</position>
@@ -39,8 +37,8 @@
             <lastname>Clements</lastname>
             <birthday>25 August 1992</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.54</growthinmeters>
-               <weightinkilograms>78.6</weightinkilograms>
+               <growthinmeters heightUnit="m">1.54</growthinmeters>
+               <weightinkilograms weightUnit="kg">78.6</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co7">
                <position>Chief Executive Officer</position>
@@ -52,8 +50,8 @@
             <lastname>Baldwin</lastname>
             <birthday>18 December 1965</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.74</growthinmeters>
-               <weightinkilograms>72.7</weightinkilograms>
+               <growthinmeters heightUnit="m">1.74</growthinmeters>
+               <weightinkilograms weightUnit="kg">72.7</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co10">
                <position>Supervisor</position>
@@ -65,8 +63,8 @@
             <lastname>Church</lastname>
             <birthday>29 September 1999</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.66</growthinmeters>
-               <weightinkilograms>85.6</weightinkilograms>
+               <growthinmeters heightUnit="m">1.66</growthinmeters>
+               <weightinkilograms weightUnit="kg">85.6</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co1">
                <position>Bookkeeper</position>
@@ -78,8 +76,8 @@
             <lastname>Dixon</lastname>
             <birthday>14 November 1966</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.57</growthinmeters>
-               <weightinkilograms>69.0</weightinkilograms>
+               <growthinmeters heightUnit="m">1.57</growthinmeters>
+               <weightinkilograms weightUnit="kg">69.0</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co6">
                <position>Accountant</position>
@@ -91,8 +89,8 @@
             <lastname>Eaton</lastname>
             <birthday>22 February 1974</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.52</growthinmeters>
-               <weightinkilograms>83.8</weightinkilograms>
+               <growthinmeters heightUnit="m">1.52</growthinmeters>
+               <weightinkilograms weightUnit="kg">83.8</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co3">
                <position>Receptionist</position>
@@ -104,8 +102,8 @@
             <lastname>Frye</lastname>
             <birthday>17 March 1972</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.52</growthinmeters>
-               <weightinkilograms>64.8</weightinkilograms>
+               <growthinmeters heightUnit="m">1.52</growthinmeters>
+               <weightinkilograms weightUnit="kg">64.8</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co10">
                <position>Supervisor</position>
@@ -117,8 +115,8 @@
             <lastname>Tucker</lastname>
             <birthday>24 January 1973</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.67</growthinmeters>
-               <weightinkilograms>63.4</weightinkilograms>
+               <growthinmeters heightUnit="m">1.67</growthinmeters>
+               <weightinkilograms weightUnit="kg">63.4</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co4">
                <position>Supervisor</position>
@@ -130,8 +128,8 @@
             <lastname>Wolf</lastname>
             <birthday>17 February 1962</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.78</growthinmeters>
-               <weightinkilograms>72.9</weightinkilograms>
+               <growthinmeters heightUnit="m">1.78</growthinmeters>
+               <weightinkilograms weightUnit="kg">72.9</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co9">
                <position>Receptionist</position>
@@ -143,8 +141,8 @@
             <lastname>Short</lastname>
             <birthday>10 July 1999</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.76</growthinmeters>
-               <weightinkilograms>77.1</weightinkilograms>
+               <growthinmeters heightUnit="m">1.76</growthinmeters>
+               <weightinkilograms weightUnit="kg">77.1</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co6">
                <position>Bookkeeper</position>
@@ -156,8 +154,8 @@
             <lastname>Smith</lastname>
             <birthday>20 September 1999</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.57</growthinmeters>
-               <weightinkilograms>54.2</weightinkilograms>
+               <growthinmeters heightUnit="m">1.57</growthinmeters>
+               <weightinkilograms weightUnit="kg">54.2</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co14">
                <position>Controller</position>
@@ -169,8 +167,8 @@
             <lastname>Mccullough</lastname>
             <birthday>01 February 1963</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.67</growthinmeters>
-               <weightinkilograms>83.5</weightinkilograms>
+               <growthinmeters heightUnit="m">1.67</growthinmeters>
+               <weightinkilograms weightUnit="kg">83.5</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co5">
                <position>Accountant</position>
@@ -182,8 +180,8 @@
             <lastname>Olson</lastname>
             <birthday>19 December 1986</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.79</growthinmeters>
-               <weightinkilograms>71.6</weightinkilograms>
+               <growthinmeters heightUnit="m">1.79</growthinmeters>
+               <weightinkilograms weightUnit="kg">71.6</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co14">
                <position>Accountant</position>
@@ -195,8 +193,8 @@
             <lastname>Harper</lastname>
             <birthday>28 October 1974</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.52</growthinmeters>
-               <weightinkilograms>57.7</weightinkilograms>
+               <growthinmeters heightUnit="m">1.52</growthinmeters>
+               <weightinkilograms weightUnit="kg">57.7</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co2">
                <position>Supervisor</position>
@@ -208,8 +206,8 @@
             <lastname>Harvey</lastname>
             <birthday>16 April 1996</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.70</growthinmeters>
-               <weightinkilograms>55.4</weightinkilograms>
+               <growthinmeters heightUnit="m">1.70</growthinmeters>
+               <weightinkilograms weightUnit="kg">55.4</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co4">
                <position>Controller</position>
@@ -221,8 +219,8 @@
             <lastname>Holder</lastname>
             <birthday>12 July 1969</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.72</growthinmeters>
-               <weightinkilograms>59.6</weightinkilograms>
+               <growthinmeters heightUnit="m">1.72</growthinmeters>
+               <weightinkilograms weightUnit="kg">59.6</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co7">
                <position>Marketing Manager</position>
@@ -234,8 +232,8 @@
             <lastname>Vang</lastname>
             <birthday>04 March 1959</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.91</growthinmeters>
-               <weightinkilograms>74.1</weightinkilograms>
+               <growthinmeters heightUnit="m">1.91</growthinmeters>
+               <weightinkilograms weightUnit="kg">74.1</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co2">
                <position>Accountant</position>
@@ -247,8 +245,8 @@
             <lastname>Kaufman</lastname>
             <birthday>01 February 1995</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.88</growthinmeters>
-               <weightinkilograms>60.5</weightinkilograms>
+               <growthinmeters heightUnit="m">1.88</growthinmeters>
+               <weightinkilograms weightUnit="kg">60.5</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co8">
                <position>Chief Financial Officer</position>
@@ -260,8 +258,8 @@
             <lastname>Parks</lastname>
             <birthday>20 April 1995</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.61</growthinmeters>
-               <weightinkilograms>70.5</weightinkilograms>
+               <growthinmeters heightUnit="m">1.61</growthinmeters>
+               <weightinkilograms weightUnit="kg">70.5</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co4">
                <position>Marketing Manager</position>
@@ -273,8 +271,8 @@
             <lastname>Bonner</lastname>
             <birthday>19 April 1986</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.57</growthinmeters>
-               <weightinkilograms>92.6</weightinkilograms>
+               <growthinmeters heightUnit="m">1.57</growthinmeters>
+               <weightinkilograms weightUnit="kg">92.6</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co12">
                <position>Controller</position>
@@ -286,8 +284,8 @@
             <lastname>Valdez</lastname>
             <birthday>13 December 1966</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.94</growthinmeters>
-               <weightinkilograms>82.5</weightinkilograms>
+               <growthinmeters heightUnit="m">1.94</growthinmeters>
+               <weightinkilograms weightUnit="kg">82.5</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co13">
                <position>Production Manager</position>
@@ -299,8 +297,8 @@
             <lastname>Callahan</lastname>
             <birthday>18 January 1996</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.92</growthinmeters>
-               <weightinkilograms>99.2</weightinkilograms>
+               <growthinmeters heightUnit="m">1.92</growthinmeters>
+               <weightinkilograms weightUnit="kg">99.2</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co1">
                <position>Supervisor</position>
@@ -312,8 +310,8 @@
             <lastname>Sharp</lastname>
             <birthday>03 September 1991</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.74</growthinmeters>
-               <weightinkilograms>80.7</weightinkilograms>
+               <growthinmeters heightUnit="m">1.74</growthinmeters>
+               <weightinkilograms weightUnit="kg">80.7</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co5">
                <position>Chief Executive Officer</position>
@@ -325,8 +323,8 @@
             <lastname>Lopez</lastname>
             <birthday>05 November 1969</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.73</growthinmeters>
-               <weightinkilograms>73.1</weightinkilograms>
+               <growthinmeters heightUnit="m">1.73</growthinmeters>
+               <weightinkilograms weightUnit="kg">73.1</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co4">
                <position>Production Manager</position>
@@ -338,8 +336,8 @@
             <lastname>Craig</lastname>
             <birthday>18 February 1985</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.85</growthinmeters>
-               <weightinkilograms>71.4</weightinkilograms>
+               <growthinmeters heightUnit="m">1.85</growthinmeters>
+               <weightinkilograms weightUnit="kg">71.4</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co14">
                <position>Controller</position>
@@ -351,8 +349,8 @@
             <lastname>Phillips</lastname>
             <birthday>26 December 1997</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.61</growthinmeters>
-               <weightinkilograms>85.8</weightinkilograms>
+               <growthinmeters heightUnit="m">1.61</growthinmeters>
+               <weightinkilograms weightUnit="kg">85.8</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co11">
                <position>Controller</position>
@@ -364,8 +362,8 @@
             <lastname>Mays</lastname>
             <birthday>25 February 1968</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.86</growthinmeters>
-               <weightinkilograms>68.7</weightinkilograms>
+               <growthinmeters heightUnit="m">1.86</growthinmeters>
+               <weightinkilograms weightUnit="kg">68.7</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co7">
                <position>Receptionist</position>
@@ -377,8 +375,8 @@
             <lastname>Pena</lastname>
             <birthday>06 July 1960</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.74</growthinmeters>
-               <weightinkilograms>72.7</weightinkilograms>
+               <growthinmeters heightUnit="m">1.74</growthinmeters>
+               <weightinkilograms weightUnit="kg">72.7</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co6">
                <position>Bookkeeper</position>
@@ -390,8 +388,8 @@
             <lastname>Charles</lastname>
             <birthday>03 January 1964</birthday>
             <physicalcharacteristics>
-               <growthinmeters>1.85</growthinmeters>
-               <weightinkilograms>60.4</weightinkilograms>
+               <growthinmeters heightUnit="m">1.85</growthinmeters>
+               <weightinkilograms weightUnit="kg">60.4</weightinkilograms>
             </physicalcharacteristics>
             <work companyid="co11">
                <position>Accountant</position>
