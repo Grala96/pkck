@@ -16,8 +16,11 @@
 				<!ELEMENT birthday (#PCDATA)>
 				
 				<!ELEMENT physicalcharacteristics (growthinmeters?,weightinkilograms?)>
+					
 					<!ELEMENT growthinmeters (#PCDATA)>
+					<!ATTLIST person heightUnit #IMPLIED>
 					<!ELEMENT weightinkilograms (#PCDATA)>
+					<!ATTLIST person weightUnit #IMPLIED>
 				
 				<!ELEMENT work (position*)>
 				<!ATTLIST work companyid IDREF #REQUIRED>
