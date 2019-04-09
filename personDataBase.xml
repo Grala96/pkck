@@ -3,12 +3,14 @@
 <!-- <!DOCTYPE database SYSTEM "definitions.dtd"> -->
 <database  xmlns="https://www.PKCK_dw_gg.com"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
-
+xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd"
+xmlns:peo="https://www.PKCK_dw_gg.com"
+xmlns:addr="https://www.PKCK_dw_gg.com"
+>
    <logo/>
    <data>
       <people>
-         <person personid="p1">
+         <peo:person personid="p1">
             <firstname>Whitney</firstname>
             <middlename>Aubrie</middlename>
             <lastname>Peterson</lastname>
@@ -21,7 +23,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Production Manager</position>
             </work>
          </person>
-         <person personid="p2" house="h19">
+         <peo:person personid="p2" house="h19">
             <firstname>Jaylen</firstname>
             <middlename>Maddy</middlename>
             <lastname>Flores</lastname>
@@ -34,7 +36,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Supervisor</position>
             </work>
          </person>
-         <person personid="p3" house="h13">
+         <peo:person personid="p3" house="h13">
             <firstname>Keaton</firstname>
             <middlename>Rohan</middlename>
             <lastname>Clements</lastname>
@@ -47,7 +49,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Chief Executive Officer</position>
             </work>
          </person>
-         <person personid="p4" house="h16">
+         <peo:person personid="p4" house="h16">
             <firstname>Franco</firstname>
             <middlename>Aubra</middlename>
             <lastname>Baldwin</lastname>
@@ -60,7 +62,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Supervisor</position>
             </work>
          </person>
-         <person personid="p5" house="h2">
+         <peo:person personid="p5" house="h2">
             <firstname>Cohen</firstname>
             <middlename>Dusty</middlename>
             <lastname>Church</lastname>
@@ -73,7 +75,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Bookkeeper</position>
             </work>
          </person>
-         <person personid="p6" house="h2">
+         <peo:person personid="p6" house="h2">
             <firstname>Conor</firstname>
             <middlename>Rory</middlename>
             <lastname>Dixon</lastname>
@@ -86,7 +88,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Accountant</position>
             </work>
          </person>
-         <person personid="p7" house="h8">
+         <peo:person personid="p7" house="h8">
             <firstname>Kellen</firstname>
             <middlename>Aubrie</middlename>
             <lastname>Eaton</lastname>
@@ -99,7 +101,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Receptionist</position>
             </work>
          </person>
-         <person personid="p8" house="h10">
+         <peo:person personid="p8" house="h10">
             <firstname>Hector</firstname>
             <middlename>Sky</middlename>
             <lastname>Frye</lastname>
@@ -112,7 +114,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Supervisor</position>
             </work>
          </person>
-         <person personid="p9" house="h3">
+         <peo:person personid="p9" house="h3">
             <firstname>Zion</firstname>
             <middlename>Morgan</middlename>
             <lastname>Tucker</lastname>
@@ -125,7 +127,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Supervisor</position>
             </work>
          </person>
-         <person personid="p10" house="h17">
+         <peo:person personid="p10" house="h17">
             <firstname>Liana</firstname>
             <middlename>Maxie</middlename>
             <lastname>Wolf</lastname>
@@ -138,7 +140,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Receptionist</position>
             </work>
          </person>
-         <person personid="p11" house="h9">
+         <peo:person personid="p11" house="h9">
             <firstname>Arthur</firstname>
             <middlename>Janica</middlename>
             <lastname>Short</lastname>
@@ -151,7 +153,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Bookkeeper</position>
             </work>
          </person>
-         <person personid="p12" house="h10">
+         <peo:person personid="p12" house="h10">
             <firstname>Pamela</firstname>
             <middlename>Cassidy</middlename>
             <lastname>Smith</lastname>
@@ -164,7 +166,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Controller</position>
             </work>
          </person>
-         <person personid="p13" house="h4">
+         <peo:person personid="p13" house="h4">
             <firstname>Collin</firstname>
             <middlename>Jami</middlename>
             <lastname>Mccullough</lastname>
@@ -177,7 +179,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Accountant</position>
             </work>
          </person>
-         <person personid="p14" house="h17">
+         <peo:person personid="p14" house="h17">
             <firstname>Jaidyn</firstname>
             <middlename>Kelsey</middlename>
             <lastname>Olson</lastname>
@@ -190,7 +192,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Accountant</position>
             </work>
          </person>
-         <person personid="p15" house="h7">
+         <peo:person personid="p15" house="h7">
             <firstname>Jaden</firstname>
             <middlename>Rudy</middlename>
             <lastname>Harper</lastname>
@@ -203,7 +205,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Supervisor</position>
             </work>
          </person>
-         <person personid="p16" house="h8">
+         <peo:person personid="p16" house="h8">
             <firstname>Ayla</firstname>
             <middlename>Maxy</middlename>
             <lastname>Harvey</lastname>
@@ -216,7 +218,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Controller</position>
             </work>
          </person>
-         <person personid="p17" house="h7">
+         <peo:person personid="p17" house="h7">
             <firstname>Brenden</firstname>
             <middlename>Gabriel</middlename>
             <lastname>Holder</lastname>
@@ -229,7 +231,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Marketing Manager</position>
             </work>
          </person>
-         <person personid="p18" house="h3">
+         <peo:person personid="p18" house="h3">
             <firstname>Harold</firstname>
             <middlename>Amari</middlename>
             <lastname>Vang</lastname>
@@ -242,7 +244,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Accountant</position>
             </work>
          </person>
-         <person personid="p19" house="h17">
+         <peo:person personid="p19" house="h17">
             <firstname>Elizabeth</firstname>
             <middlename>Bunny</middlename>
             <lastname>Kaufman</lastname>
@@ -255,7 +257,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Chief Financial Officer</position>
             </work>
          </person>
-         <person personid="p20" house="h16">
+         <peo:person personid="p20" house="h16">
             <firstname>Ryder</firstname>
             <middlename>Maya</middlename>
             <lastname>Parks</lastname>
@@ -268,7 +270,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Marketing Manager</position>
             </work>
          </person>
-         <person personid="p21" house="h9">
+         <peo:person personid="p21" house="h9">
             <firstname>Kaylyn</firstname>
             <middlename>Shay</middlename>
             <lastname>Bonner</lastname>
@@ -281,7 +283,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Controller</position>
             </work>
          </person>
-         <person personid="p22" house="h15">
+         <peo:person personid="p22" house="h15">
             <firstname>Joziah</firstname>
             <middlename>Jamea</middlename>
             <lastname>Valdez</lastname>
@@ -294,7 +296,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Production Manager</position>
             </work>
          </person>
-         <person personid="p23" house="h19">
+         <peo:person personid="p23" house="h19">
             <firstname>Kole</firstname>
             <middlename>Tailor</middlename>
             <lastname>Callahan</lastname>
@@ -307,7 +309,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Supervisor</position>
             </work>
          </person>
-         <person personid="p24" house="h8">
+         <peo:person personid="p24" house="h8">
             <firstname>Averi</firstname>
             <middlename>Sela</middlename>
             <lastname>Sharp</lastname>
@@ -320,7 +322,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Chief Executive Officer</position>
             </work>
          </person>
-         <person personid="p25" house="h2">
+         <peo:person personid="p25" house="h2">
             <firstname>Cayden</firstname>
             <middlename>Haven</middlename>
             <lastname>Lopez</lastname>
@@ -333,7 +335,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Production Manager</position>
             </work>
          </person>
-         <person personid="p26" house="h6">
+         <peo:person personid="p26" house="h6">
             <firstname>Saige</firstname>
             <middlename>Parker</middlename>
             <lastname>Craig</lastname>
@@ -346,7 +348,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Controller</position>
             </work>
          </person>
-         <person personid="p27" house="h9">
+         <peo:person personid="p27" house="h9">
             <firstname>Kai</firstname>
             <middlename>Morgan</middlename>
             <lastname>Phillips</lastname>
@@ -359,7 +361,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Controller</position>
             </work>
          </person>
-         <person personid="p28" house="h19">
+         <peo:person personid="p28" house="h19">
             <firstname>Amiya</firstname>
             <middlename>Chris</middlename>
             <lastname>Mays</lastname>
@@ -372,7 +374,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Receptionist</position>
             </work>
          </person>
-         <person personid="p29" house="h14">
+         <peo:person personid="p29" house="h14">
             <firstname>Louis</firstname>
             <middlename>Sage</middlename>
             <lastname>Pena</lastname>
@@ -385,7 +387,7 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
                <position>Bookkeeper</position>
             </work>
          </person>
-         <person personid="p30" house="h8">
+         <peo:person personid="p30" house="h8">
             <firstname>Graham</firstname>
             <middlename>Leslie</middlename>
             <lastname>Charles</lastname>
@@ -402,10 +404,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
       <houses>
          <house houseid="h1">
             <address>
-               <streetaddress>557 114th</streetaddress>
-               <city>Allentown</city>
-               <country>United States</country>
-               <zipcode>18192</zipcode>
+               <addr:streetaddress>557 114th</addr:streetaddress>
+               <addr:city>Allentown</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>18192</addr:zipcode>
             </address>
             <geolocation>
                <latitude>39.89541874</latitude>
@@ -414,10 +416,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h2">
             <address>
-               <streetaddress>7039 Drexel Square</streetaddress>
-               <city>Newark</city>
-               <country>United States</country>
-               <zipcode>07140</zipcode>
+               <addr:streetaddress>7039 Drexel Square</addr:streetaddress>
+               <addr:city>Newark</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>07140</addr:zipcode>
             </address>
             <geolocation>
                <latitude>39.89170627</latitude>
@@ -426,10 +428,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h3">
             <address>
-               <streetaddress>938 Elbridge</streetaddress>
-               <city>Riverside</city>
-               <country>United States</country>
-               <zipcode>92582</zipcode>
+               <addr:streetaddress>938 Elbridge</addr:streetaddress>
+               <addr:city>Riverside</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>92582</addr:zipcode>
             </address>
             <geolocation>
                <latitude>34.28857828</latitude>
@@ -438,10 +440,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h4">
             <address>
-               <streetaddress>817 Orleans</streetaddress>
-               <city>Peoria</city>
-               <country>United States</country>
-               <zipcode>61563</zipcode>
+               <addr:streetaddress>817 Orleans</addr:streetaddress>
+               <addr:city>Peoria</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>61563</addr:zipcode>
             </address>
             <geolocation>
                <latitude>32.62520073</latitude>
@@ -450,10 +452,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h5">
             <address>
-               <streetaddress>5664 Busse</streetaddress>
-               <city>Indianapolis</city>
-               <country>United States</country>
-               <zipcode>46341</zipcode>
+               <addr:streetaddress>5664 Busse</addr:streetaddress>
+               <addr:city>Indianapolis</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>46341</addr:zipcode>
             </address>
             <geolocation>
                <latitude>36.9125281</latitude>
@@ -462,10 +464,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h6">
             <address>
-               <streetaddress>8145 Francisco</streetaddress>
-               <city>San Antonio</city>
-               <country>United States</country>
-               <zipcode>78730</zipcode>
+               <addr:streetaddress>8145 Francisco</addr:streetaddress>
+               <addr:city>San Antonio</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>78730</addr:zipcode>
             </address>
             <geolocation>
                <latitude>32.89412213</latitude>
@@ -474,10 +476,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h7">
             <address>
-               <streetaddress>8312 Heath</streetaddress>
-               <city>New Orleans</city>
-               <country>United States</country>
-               <zipcode>70675</zipcode>
+               <addr:streetaddress>8312 Heath</addr:streetaddress>
+               <addr:city>New Orleans</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>70675</addr:zipcode>
             </address>
             <geolocation>
                <latitude>33.51116387</latitude>
@@ -486,10 +488,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h8">
             <address>
-               <streetaddress>1869 Charleston</streetaddress>
-               <city>Columbia</city>
-               <country>United States</country>
-               <zipcode>29062</zipcode>
+               <addr:streetaddress>1869 Charleston</addr:streetaddress>
+               <addr:city>Columbia</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>29062</addr:zipcode>
             </address>
             <geolocation>
                <latitude>41.15267094</latitude>
@@ -498,10 +500,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h9">
             <address>
-               <streetaddress>3544 Sedgwick</streetaddress>
-               <city>Evansville</city>
-               <country>United States</country>
-               <zipcode>47792</zipcode>
+               <addr:streetaddress>3544 Sedgwick</addr:streetaddress>
+               <addr:city>Evansville</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>47792</addr:zipcode>
             </address>
             <geolocation>
                <latitude>39.77525243</latitude>
@@ -510,10 +512,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h10">
             <address>
-               <streetaddress>2983 I55 Kedzie Av</streetaddress>
-               <city>New Orleans</city>
-               <country>United States</country>
-               <zipcode>70290</zipcode>
+               <addr:streetaddress>2983 I55 Kedzie Av</addr:streetaddress>
+               <addr:city>New Orleans</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>70290</addr:zipcode>
             </address>
             <geolocation>
                <latitude>36.03630381</latitude>
@@ -522,10 +524,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h11">
             <address>
-               <streetaddress>3938 Franklin Ext Stevenson Ob</streetaddress>
-               <city>Norfolk</city>
-               <country>United States</country>
-               <zipcode>23592</zipcode>
+               <addr:streetaddress>3938 Franklin Ext Stevenson Ob</addr:streetaddress>
+               <addr:city>Norfolk</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>23592</addr:zipcode>
             </address>
             <geolocation>
                <latitude>35.800365</latitude>
@@ -534,10 +536,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h12">
             <address>
-               <streetaddress>8718 Bowmanville</streetaddress>
-               <city>Louisville</city>
-               <country>United States</country>
-               <zipcode>40591</zipcode>
+               <addr:streetaddress>8718 Bowmanville</addr:streetaddress>
+               <addr:city>Louisville</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>40591</addr:zipcode>
             </address>
             <geolocation>
                <latitude>41.65043458</latitude>
@@ -546,10 +548,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h13">
             <address>
-               <streetaddress>9737 Washtenaw</streetaddress>
-               <city>Peoria</city>
-               <country>United States</country>
-               <zipcode>85324</zipcode>
+               <addr:streetaddress>9737 Washtenaw</addr:streetaddress>
+               <addr:city>Peoria</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>85324</addr:zipcode>
             </address>
             <geolocation>
                <latitude>43.16435385</latitude>
@@ -558,10 +560,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h14">
             <address>
-               <streetaddress>7691 Hale</streetaddress>
-               <city>Overland Park</city>
-               <country>United States</country>
-               <zipcode>66285</zipcode>
+               <addr:streetaddress>7691 Hale</addr:streetaddress>
+               <addr:city>Overland Park</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>66285</addr:zipcode>
             </address>
             <geolocation>
                <latitude>41.70094444</latitude>
@@ -570,10 +572,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h15">
             <address>
-               <streetaddress>6443 Edgewater</streetaddress>
-               <city>Cary</city>
-               <country>United States</country>
-               <zipcode>27514</zipcode>
+               <addr:streetaddress>6443 Edgewater</addr:streetaddress>
+               <addr:city>Cary</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>27514</addr:zipcode>
             </address>
             <geolocation>
                <latitude>36.08140372</latitude>
@@ -582,10 +584,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h16">
             <address>
-               <streetaddress>601 Edward Barron</streetaddress>
-               <city>Richmond</city>
-               <country>United States</country>
-               <zipcode>23292</zipcode>
+               <addr:streetaddress>601 Edward Barron</addr:streetaddress>
+               <addr:city>Richmond</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>23292</addr:zipcode>
             </address>
             <geolocation>
                <latitude>41.04853241</latitude>
@@ -594,10 +596,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h17">
             <address>
-               <streetaddress>6895 Larned</streetaddress>
-               <city>Minneapolis</city>
-               <country>United States</country>
-               <zipcode>55861</zipcode>
+               <addr:streetaddress>6895 Larned</addr:streetaddress>
+               <addr:city>Minneapolis</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>55861</addr:zipcode>
             </address>
             <geolocation>
                <latitude>44.23968919</latitude>
@@ -606,10 +608,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h18">
             <address>
-               <streetaddress>5026 Surf</streetaddress>
-               <city>Riverside</city>
-               <country>United States</country>
-               <zipcode>92545</zipcode>
+               <addr:streetaddress>5026 Surf</addr:streetaddress>
+               <addr:city>Riverside</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>92545</addr:zipcode>
             </address>
             <geolocation>
                <latitude>41.21893739</latitude>
@@ -618,10 +620,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h19">
             <address>
-               <streetaddress>9691 65th</streetaddress>
-               <city>Montpelier</city>
-               <country>United States</country>
-               <zipcode>05666</zipcode>
+               <addr:streetaddress>9691 65th</addr:streetaddress>
+               <addr:city>Montpelier</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>05666</addr:zipcode>
             </address>
             <geolocation>
                <latitude>32.57966921</latitude>
@@ -630,10 +632,10 @@ xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
          </house>
          <house houseid="h20">
             <address>
-               <streetaddress>8006 Belmont</streetaddress>
-               <city>Salt Lake City</city>
-               <country>United States</country>
-               <zipcode>84097</zipcode>
+               <addr:streetaddress>8006 Belmont</addr:streetaddress>
+               <addr:city>Salt Lake City</addr:city>
+               <addr:country>United States</addr:country>
+               <addr:zipcode>84097</addr:zipcode>
             </address>
             <geolocation>
                <latitude>35.45106304</latitude>
