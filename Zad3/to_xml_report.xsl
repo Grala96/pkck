@@ -7,8 +7,26 @@
 
   <xsl:template match="/">
     <xsl:element name="root">
-      <xsl:apply-templates select="database/data"/>
-      <xsl:apply-templates select="database/data/people/person"/>
+      <xsl:element name="personal-data">
+        <xsl:apply-templates select="database/data"/>
+        <xsl:apply-templates select="database/data/people/person"/>
+        <xsl:apply-templates select="data/people/person/birthday"/>
+      </xsl:element>
+      <xsl:element name="satatistics">
+        <xsl:element name="age-statistics">
+          <young>
+            <xsl:value-of select="count(database/data/people/person/birthday[ year-from-date(current-date()) - number(substring(., string-length(.)-4, 80)) &lt;= 25])"/>
+          </young>
+          <adult>
+            <xsl:value-of select="count((database/data/people/person/birthday[ year-from-date(current-date()) - number(substring(., string-length(.)-4, 80)) &gt; 25])
+              and (database/data/people/person/birthday[ year-from-date(current-date()) - number(substring(., string-length(.)-4, 80)) &lt;= 60]))"/>
+          </adult>
+          <old>
+            <xsl:value-of select="count(database/data/people/person/birthday[ year-from-date(current-date()) - number(substring(., string-length(.)-4, 80)) &gt; 60])"/>
+          </old>
+        </xsl:element>
+      </xsl:element>
+      <xsl:copy-of select="database/administrators"/>
     </xsl:element>
   </xsl:template>
 
@@ -31,23 +49,27 @@
           <xsl:value-of select="address/city"/>
         </xsl:element>
       </xsl:for-each>
-      
-      <xsl:element name="work">        
+
+      <xsl:element name="work">
         <xsl:for-each select="key('work_key', work/@companyid)">
           <xsl:element name="company">
             <xsl:value-of select="companyname"/>
-          </xsl:element>          
-      <xsl:element name="position">
-        <xsl:value-of select="work/position"/>
-      </xsl:element>
+          </xsl:element>
+          <xsl:element name="position">
+            <xsl:value-of select="work/position"/>
+          </xsl:element>
         </xsl:for-each>
-
       </xsl:element>
+
     </xsl:element>
-
-
   </xsl:template>
 
+  <xsl:template match="database/administrators">
+    <xsl:element name="aa">
+      <xsl:copy-of select="admin"/>
+    </xsl:element>
+    <xsl:apply-templates/>
+  </xsl:template>
 
 
 </xsl:stylesheet>
