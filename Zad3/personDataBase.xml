@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="to_xml_report.xsl"?>
 <!-- <!DOCTYPE database SYSTEM "definitions.dtd"> -->
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
-
-   <logo/>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com personDataBase.xsd">
+   <logo />
    <data>
       <people>
          <person personid="p1">
@@ -1101,10 +1099,14 @@
       </products>
    </data>
    <administrators>
-      <copyright> PKCK Project &#169; 2019</copyright>
-      <admin> Gracjan Grala <index>210192</index>
+      <copyright>PKCK Project © 2019</copyright>
+      <admin>
+         Gracjan Grala
+         <index>210192</index>
       </admin>
-      <admin> Dominika Wójcik <index>210355</index>
+      <admin>
+         Dominika Wójcik
+         <index>210355</index>
       </admin>
    </administrators>
 </database>

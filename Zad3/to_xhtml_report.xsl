@@ -2,16 +2,51 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
    <xsl:template match="/root">
       <html>
-         <body>
-            <h1 align="center">Personal Database</h1>
-            <table border="3" align="center">
+	  <head>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+	  <style>
+	  h1 {
+	  margin: 10px 0;
+	  }
+	  .nav-link {
+	  margin: 0 5px;
+	  }
+	  </style>
+	  </head>
+         <body style="max-width:850px; margin:10 auto;">
+		 <header>
+		 <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link btn btn-secondary" href="#personal-database">Personal Database</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link btn btn-secondary" href="#statistics">Statistics</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-secondary" href="#card-owners">Card Owners</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-secondary" href="#age-statistics">Age Statistics</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link btn btn-secondary" href="#administrators">Administrators</a>
+  </li>
+</ul>
+</header>
+		 
+		 
+            <h1 class="alert alert-dark" align="center" id="personal-database">Personal Database</h1>
+			<div class="table-responsive">
+            <table align="center" class="table table-striped table-sm">
+			<thead class="thead-light">
                <tr>
-                  <th>Name</th>
-                  <th>Birthday</th>
-                  <th>Country</th>
-                  <th>City</th>
-                  <th>Company</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Birthday</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Company</th>
                </tr>
+			   </thead>
                <xsl:for-each select="personal-data/person">
                   <tr>
                      <td>
@@ -32,14 +67,18 @@
                   </tr>
                </xsl:for-each>
             </table>
-            <h1 align="center">Statistics</h1>
-            <table border="3" align="center">
+			</div>
+            <h1 class="alert alert-dark" align="center" id="statistics">Statistics</h1>
+			<div class="table-responsive">
+            <table align="center" class="table table-striped table-sm">
+			<thead class="thead-light">
                <tr>
-                  <th>Name</th>
-                  <th>BMI</th>
-                  <th>Weight Rate</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">BMI</th>
+                  <th scope="col">Weight Rate</th>
                </tr>
-               <xsl:for-each select="satatistics/bmi-statistics/pernon-bmi">
+			   </thead>
+               <xsl:for-each select="statistics/bmi-stats/person-bmi">
                   <tr>
                      <td>
                         <xsl:value-of select="name" />
@@ -53,13 +92,17 @@
                   </tr>
                </xsl:for-each>
             </table>
-			<h1 align="center">Card Owners</h1>
-            <table border="3" align="center">
+			</div>
+			<h1 class="alert alert-dark" align="center" id="card-owners">Card Owners</h1>
+			<div class="table-responsive" style="max-width: 400px;">
+            <table align="center" class="table table-striped table-sm">
+			<thead class="thead-light">
                <tr>
-                  <th>Card</th>
-                  <th>Quantity</th>
+                  <th scope="col">Card</th>
+                  <th scope="col">Quantity</th>
                </tr>
-               <xsl:for-each select="satatistics/card-owners/*">
+			   </thead>
+               <xsl:for-each select="statistics/card-owners/*">
                   <tr>
                      <td>
                         <xsl:value-of select="local-name()"/>
@@ -70,13 +113,17 @@
                   </tr>
                </xsl:for-each>
             </table>
-			<h1 align="center">Ages</h1>
-            <table border="3" align="center">
+			</div>
+			<h1 class="alert alert-dark" align="center" id="age-statistics">Age Statistics</h1>
+			<div class="table-responsive" style="max-width: 400px;">
+            <table align="center" class="table table-striped table-sm">
+			<thead class="thead-light">
                <tr>
-                  <th>Name</th>
-                  <th>Value</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Quantity</th>
                </tr>
-               <xsl:for-each select="satatistics/age-statistics/*">
+			   </thead>
+               <xsl:for-each select="statistics/age-stats/*">
                   <tr>
                      <td>
                         <xsl:value-of select="local-name()"/>
@@ -87,12 +134,16 @@
                   </tr>
                </xsl:for-each>
             </table>
-		<h1 align="center">Administrators</h1>
-            <table border="3" align="center">
+			</div>
+		<h1 class="alert alert-dark" align="center" id="administrators">Administrators</h1>
+		<div class="table-responsive" style="max-width: 400px;">
+            <table align="center" class="table table-striped table-sm">
+			<thead class="thead-light">
                <tr>
-                  <th>Name</th>
-                  <th>Index</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Index</th>
                </tr>
+			   </thead>
                <xsl:for-each select="administrators/*[name()!='copyright']">
                   <tr>
                      <td>
@@ -104,6 +155,12 @@
                   </tr>
                </xsl:for-each>
             </table>
+			</div>
+			<footer class="alert alert-secondary">
+			<div class="footer-copyright text-center py-3">
+				<xsl:value-of select="/root/administrators/copyright" />
+			</div>
+			</footer>
          </body>
       </html>
    </xsl:template>

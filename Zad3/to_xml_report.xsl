@@ -12,8 +12,8 @@
         <xsl:apply-templates select="database/data/people/person"/>
         <xsl:apply-templates select="data/people/person/birthday"/>
       </xsl:element>
-      <xsl:element name="satatistics">
-        <xsl:element name="age-statistics">
+      <xsl:element name="statistics">
+        <xsl:element name="age-stats">
           <young>
             <xsl:value-of select="count(database/data/people/person/birthday[ year-from-date(current-date()) - number(substring(., string-length(.)-4, 80)) &lt;= 25])"/>
           </young>
@@ -26,9 +26,9 @@
           </old>
         </xsl:element>
         
-        <xsl:element name="bmi-statistics">
+        <xsl:element name="bmi-stats">
           <xsl:for-each select="database/data/people/person">
-            <pernon-bmi>
+            <person-bmi>
             <name>
             <xsl:value-of select="concat(lastname, ' ', firstname)"/>
             </name>
@@ -58,7 +58,7 @@
                 </weight-rate>
               </xsl:if>
             </bmi>
-              </pernon-bmi>
+              </person-bmi>
             </xsl:for-each>          
         </xsl:element>
         
