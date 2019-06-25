@@ -22,9 +22,7 @@
       <menus>
         <Menu fx:id="menuBar_menu" mnemonicParsing="false" text="File">
           <items>
-            <MenuItem fx:id="menuNew" mnemonicParsing="false" text="New" />
             <MenuItem fx:id="menuOpen" mnemonicParsing="false" text="Open…" />
-            <MenuItem fx:id="MenuSave" mnemonicParsing="false" text="Save" />
             <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" text="Save As…" />
             <MenuItem fx:id="menuQuit" mnemonicParsing="false" text="Quit" />
           </items>

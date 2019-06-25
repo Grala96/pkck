@@ -35,13 +35,7 @@ public class Controller {
     private Menu menuBar_menu;
 
     @FXML
-    private MenuItem menuNew;
-
-    @FXML
     private MenuItem menuOpen;
-
-    @FXML
-    private MenuItem MenuSave;
 
     @FXML
     private MenuItem menuSaveAs;
@@ -93,14 +87,6 @@ public class Controller {
 
     private ObservableList<Person> personObservableList = FXCollections.observableList(new ArrayList<>());
 
-//    private List<PersonView.Person> converter(List<PersonType> list) {
-//        List<PersonView.Person> personList = new ArrayList<>();
-//        for (PersonType personType : list) {
-//            personList.add(new PersonView.Person(personType));
-//        }
-//        return personList;
-//    }
-
     @FXML
     void initialize() {
         configTableView();
@@ -108,9 +94,7 @@ public class Controller {
         assert headVBox != null : "fx:id=\"headVBox\" was not injected: check your FXML file 'sample.fxml'.";
         assert menuBar != null : "fx:id=\"menuBar\" was not injected: check your FXML file 'sample.fxml'.";
         assert menuBar_menu != null : "fx:id=\"menuBar_menu\" was not injected: check your FXML file 'sample.fxml'.";
-        assert menuNew != null : "fx:id=\"menuNew\" was not injected: check your FXML file 'sample.fxml'.";
         assert menuOpen != null : "fx:id=\"menuOpen\" was not injected: check your FXML file 'sample.fxml'.";
-        assert MenuSave != null : "fx:id=\"MenuSave\" was not injected: check your FXML file 'sample.fxml'.";
         assert menuSaveAs != null : "fx:id=\"menuSaveAs\" was not injected: check your FXML file 'sample.fxml'.";
         assert menuQuit != null : "fx:id=\"menuQuit\" was not injected: check your FXML file 'sample.fxml'.";
         assert personTableView != null : "fx:id=\"personTableView\" was not injected: check your FXML file 'sample.fxml'.";
