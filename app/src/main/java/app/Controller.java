@@ -88,6 +88,9 @@ public class Controller {
     private Button peopleResetButton;
 
     @FXML
+    private Button peopleDeleteButton;
+
+    @FXML
     private TableView<Person> personTableView = new TableView<>();
 
     private FileController fileController = new FileController();
@@ -146,19 +149,30 @@ public class Controller {
             );
             personObservableList.add(person);
             database.getPeople().getPerson().add(person.mapToPersonType());
-            peopleInputPersonId.clear();
-            peopleInputHeight.clear();
-            peopleInputFirstname.clear();
-            peopleInputHeightUnit.clear();
-            peopleInputMiddlename.clear();
-            peopleInputWeight.clear();
-            peopleInputLastname.clear();
-            peopleInputWeightUnit.clear();
-            peopleInputBirthday.clear();
-            peopleInputCompanyId.clear();
-            peopleInputHouseId.clear();
-            peopleInputPosition.clear();
+            clearInputsText();
         });
+
+        peopleDeleteButton.setOnAction(e -> {
+            Person selectedItem = personTableView.getSelectionModel().getSelectedItem();
+            personTableView.getItems().remove(selectedItem);
+        });
+
+        peopleResetButton.setOnAction(e -> clearInputsText());
+    }
+
+    private void clearInputsText(){
+        peopleInputPersonId.clear();
+        peopleInputHeight.clear();
+        peopleInputFirstname.clear();
+        peopleInputHeightUnit.clear();
+        peopleInputMiddlename.clear();
+        peopleInputWeight.clear();
+        peopleInputLastname.clear();
+        peopleInputWeightUnit.clear();
+        peopleInputBirthday.clear();
+        peopleInputCompanyId.clear();
+        peopleInputHouseId.clear();
+        peopleInputPosition.clear();
     }
 
     private void updateDatabase() {
