@@ -1,7 +1,10 @@
 package app;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -18,6 +21,9 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.apache.fop.apps.FOPException;
+
+import javax.xml.transform.TransformerException;
 
 public class Controller {
 
@@ -44,6 +50,9 @@ public class Controller {
 
     @FXML
     private MenuItem menuQuit;
+
+    @FXML
+    private MenuItem menuConvertToPdf;
 
     @FXML
     private TextField peopleInputPersonId;
@@ -129,6 +138,39 @@ public class Controller {
             if (file != null) {
                 updateDatabase();
                 fileController.saveXML(file, database);
+            }
+        });
+
+        menuConvertToPdf.setOnAction(e -> {
+            FileChooser fileChooser = new FileChooser();
+
+            // LOAD XSL FILE
+            URL res = getClass().getClassLoader().getResource("to_pdf_report.xsl");
+            File xslFile = null;
+            try {
+                xslFile = Paths.get(res.toURI()).toFile();
+            } catch (URISyntaxException ex) {
+                ex.printStackTrace();
+            }
+
+            // LOAD XML FILE
+            Stage openXmlFile = new Stage();
+            openXmlFile.setTitle("Wybierz plik XML do odczytu.");
+            File xmlFile = fileChooser.showOpenDialog(openXmlFile);
+
+            // SAVE PDF FILE
+            Stage savePdfFile = new Stage();
+            savePdfFile.setTitle("Wybierz ścieżkę do zapisu pliku PDF.");
+            File pdfFile = fileChooser.showSaveDialog(savePdfFile);
+
+            try {
+                fileController.convertToPDF(xslFile,xmlFile,pdfFile);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            } catch (FOPException ex) {
+                ex.printStackTrace();
+            } catch (TransformerException ex) {
+                ex.printStackTrace();
             }
         });
 

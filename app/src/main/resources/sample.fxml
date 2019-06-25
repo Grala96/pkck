@@ -28,6 +28,11 @@
             <MenuItem fx:id="menuQuit" mnemonicParsing="false" text="Quit" />
           </items>
         </Menu>
+            <Menu mnemonicParsing="false" text="Convert">
+              <items>
+                <MenuItem fx:id="menuConvertToPdf" mnemonicParsing="false" text="To PDF..." />
+              </items>
+            </Menu>
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="483.0" prefWidth="753.0" VBox.vgrow="ALWAYS">
