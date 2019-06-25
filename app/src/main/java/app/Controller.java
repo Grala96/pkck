@@ -123,7 +123,6 @@ public class Controller {
                 this.database = fileController.loadXML(file);
                 personTableView.getItems().clear();
                 for (PersonType personType : this.database.getPeople().getPerson()) {
-                    System.out.println(personType.toString());
                     personObservableList.add(new Person(personType));
                 }
                 personTableView.setItems(personObservableList);
@@ -177,18 +176,19 @@ public class Controller {
         peopleAddButton.setOnAction(e -> {
             Person person = new Person(
                     peopleInputPersonId.getText(),
-                    peopleInputHeight.getText(),
                     peopleInputFirstname.getText(),
-                    peopleInputHeightUnit.getText(),
                     peopleInputMiddlename.getText(),
-                    peopleInputWeight.getText(),
                     peopleInputLastname.getText(),
-                    peopleInputWeightUnit.getText(),
                     peopleInputBirthday.getText(),
+                    peopleInputHeight.getText(),
+                    peopleInputHeightUnit.getText(),
+                    peopleInputWeight.getText(),
+                    peopleInputWeightUnit.getText(),
                     peopleInputCompanyId.getText(),
                     peopleInputHouseId.getText(),
                     peopleInputPosition.getText()
             );
+            System.out.println(person.toString());
             personObservableList.add(person);
             database.getPeople().getPerson().add(person.mapToPersonType());
             clearInputsText();
@@ -235,7 +235,7 @@ public class Controller {
         personidCol.setCellFactory(TextFieldTableCell.forTableColumn());
         personidCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setPersonid(t.getNewValue())
         );
 
         // First Name
@@ -257,7 +257,7 @@ public class Controller {
         middleNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         middleNameCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setMiddlename(t.getNewValue())
         );
 
         // Last Name
@@ -268,7 +268,7 @@ public class Controller {
         lastNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         lastNameCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setLastname(t.getNewValue())
         );
 
         // Birthday
@@ -279,7 +279,7 @@ public class Controller {
         birthdayCol.setCellFactory(TextFieldTableCell.forTableColumn());
         birthdayCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setBirthday(t.getNewValue())
         );
 
         // Height
@@ -290,7 +290,7 @@ public class Controller {
         heightCol.setCellFactory(TextFieldTableCell.forTableColumn());
         heightCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setHeight(t.getNewValue())
         );
 
         // Height Unit
@@ -301,7 +301,7 @@ public class Controller {
         heightUnitCol.setCellFactory(TextFieldTableCell.forTableColumn());
         heightUnitCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setHeightUnit(t.getNewValue())
         );
 
         // Weight
@@ -312,7 +312,7 @@ public class Controller {
         weightCol.setCellFactory(TextFieldTableCell.forTableColumn());
         weightCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setWeight(t.getNewValue())
         );
 
         // Weight Unit
@@ -323,7 +323,7 @@ public class Controller {
         weightUnitCol.setCellFactory(TextFieldTableCell.forTableColumn());
         weightUnitCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setWeightUnit(t.getNewValue())
         );
 
         // Company ID
@@ -334,7 +334,7 @@ public class Controller {
         companyidCol.setCellFactory(TextFieldTableCell.forTableColumn());
         companyidCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setCompanyid(t.getNewValue())
         );
 
         // House ID
@@ -345,7 +345,7 @@ public class Controller {
         houseidCol.setCellFactory(TextFieldTableCell.forTableColumn());
         houseidCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setHouseid(t.getNewValue())
         );
 
         // Position
@@ -356,7 +356,7 @@ public class Controller {
         positionCol.setCellFactory(TextFieldTableCell.forTableColumn());
         positionCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
-                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+                        t.getTablePosition().getRow()).setPosition(t.getNewValue())
         );
 
         personTableView.setItems(personObservableList);
