@@ -158,7 +158,6 @@ public class Controller {
 
     }
 
-
     private void configTableView() {
         personTableView.setEditable(true);
 
