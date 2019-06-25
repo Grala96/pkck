@@ -30,6 +30,21 @@ public class Database {
     @XmlElement(required = true)
     protected AdministratorsType administrators;
 
+    public Database(PeopleType people, HousesType houses, PhonesType phones, EmailsType emails, CreditcardsType creditcards, BusinessType business, ProductsType products, AdministratorsType administrators) {
+        this.people = people;
+        this.houses = houses;
+        this.phones = phones;
+        this.emails = emails;
+        this.creditcards = creditcards;
+        this.business = business;
+        this.products = products;
+        this.administrators = administrators;
+    }
+
+    Database(){
+
+    }
+
     public PeopleType getPeople() {
         return people;
     }

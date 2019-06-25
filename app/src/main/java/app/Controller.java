@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import data.Database;
-import data.PersonType;
+import data.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -92,9 +91,10 @@ public class Controller {
     private TableView<Person> personTableView = new TableView<>();
 
     private FileController fileController = new FileController();
-    private Database database = new Database();
+    private Database database = new Database(new PeopleType(), new HousesType(), new PhonesType(), new EmailsType(),
+            new CreditcardsType(), new BusinessType(), new ProductsType(), new AdministratorsType());
 
-    private ObservableList<Person> personObservableList = FXCollections.observableList(new ArrayList<>());
+    private final ObservableList<Person> personObservableList = FXCollections.observableList(new ArrayList<>());
 
     @FXML
     void initialize() {
@@ -124,6 +124,7 @@ public class Controller {
             saveFile.setTitle("Wybierz ścieżkę do zapisu pliku XML.");
             File file = fileChooser.showSaveDialog(saveFile);
             if (file != null) {
+                updateDatabase();
                 fileController.saveXML(file, database);
             }
         });
@@ -160,68 +161,147 @@ public class Controller {
         });
     }
 
+    private void updateDatabase() {
+        this.database.getPeople().getPerson().clear();
+        for (Person person : this.personObservableList) {
+            this.database.getPeople().getPerson().add(person.mapToPersonType());
+        }
+    }
+
     private void configTableView() {
         personTableView.setEditable(true);
 
+        // Person ID
         TableColumn personidCol = new TableColumn("Person ID");
         personidCol.setMinWidth(100);
         personidCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("personid"));
+        personidCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        personidCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // First Name
         TableColumn firstNameCol = new TableColumn("First Name");
         firstNameCol.setMinWidth(100);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("firstname"));
+        firstNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        firstNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Middle Name
         TableColumn middleNameCol = new TableColumn("Middle Name");
         middleNameCol.setMinWidth(100);
         middleNameCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("middlename"));
+        middleNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        middleNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Last Name
         TableColumn lastNameCol = new TableColumn("Last Name");
         lastNameCol.setMinWidth(100);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("lastname"));
+        lastNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        lastNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Birthday
         TableColumn birthdayCol = new TableColumn("Birthday");
         birthdayCol.setMinWidth(150);
         birthdayCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("birthday"));
+        birthdayCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        birthdayCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Height
         TableColumn heightCol = new TableColumn("Height");
         heightCol.setMinWidth(100);
         heightCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("height"));
+        heightCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        heightCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Height Unit
         TableColumn heightUnitCol = new TableColumn("Height Unit");
         heightUnitCol.setMinWidth(100);
         heightUnitCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("heightUnit"));
+        heightUnitCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        heightUnitCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Weight
         TableColumn weightCol = new TableColumn("Weight");
         weightCol.setMinWidth(100);
         weightCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("weight"));
+        weightCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        weightCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
-        TableColumn weightUnitCol = new TableColumn("Birthday");
+        // Weight Unit
+        TableColumn weightUnitCol = new TableColumn("Weight Unit");
         weightUnitCol.setMinWidth(100);
         weightUnitCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("weightUnit"));
+        weightUnitCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        weightUnitCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Company ID
         TableColumn companyidCol = new TableColumn("Company ID");
         companyidCol.setMinWidth(100);
         companyidCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("companyid"));
+        companyidCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        companyidCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // House ID
         TableColumn houseidCol = new TableColumn("House ID");
         houseidCol.setMinWidth(100);
         houseidCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("houseid"));
+        houseidCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        houseidCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
+        // Position
         TableColumn positionCol = new TableColumn("Position");
         positionCol.setMinWidth(100);
         positionCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("position"));
+        positionCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        positionCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Person, String>>) t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setFirstname(t.getNewValue())
+        );
 
         personTableView.setItems(personObservableList);
         personTableView.getColumns().addAll(personidCol, firstNameCol, middleNameCol, lastNameCol, birthdayCol,
