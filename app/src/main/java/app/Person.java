@@ -16,7 +16,10 @@ public class Person {
     private final SimpleStringProperty weightUnit;
     private final SimpleStringProperty companyid;
 
-    public Person(SimpleStringProperty personid, SimpleStringProperty firstname, SimpleStringProperty middlename, SimpleStringProperty lastname, SimpleStringProperty birthday, SimpleStringProperty height, SimpleStringProperty heightUnit, SimpleStringProperty weight, SimpleStringProperty weightUnit, SimpleStringProperty companyid) {
+    public Person(SimpleStringProperty personid, SimpleStringProperty firstname, SimpleStringProperty middlename,
+                  SimpleStringProperty lastname, SimpleStringProperty birthday, SimpleStringProperty height,
+                  SimpleStringProperty heightUnit, SimpleStringProperty weight, SimpleStringProperty weightUnit,
+                  SimpleStringProperty companyid) {
         this.personid = personid;
         this.firstname = firstname;
         this.middlename = middlename;

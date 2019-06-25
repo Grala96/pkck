@@ -4,27 +4,27 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-app/.idea/**/workspace.xml
-app/.idea/**/tasks.xml
-app/.idea/**/usage.statistics.xml
-app/.idea/**/dictionaries
-app/.idea/**/shelf
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
 # Generated files
-app/.idea/**/contentModel.xml
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
-app/.idea/**/dataSources/
-app/.idea/**/dataSources.ids
-app/.idea/**/dataSources.local.xml
-app/.idea/**/sqlDataSources.xml
-app/.idea/**/dynamic.xml
-app/.idea/**/uiDesigner.xml
-app/.idea/**/dbnavigator.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
 
 # Gradle
-app/.idea/**/gradle.xml
-app/.idea/**/libraries
+.idea/**/gradle.xml
+.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -37,72 +37,72 @@ app/.idea/**/libraries
 # *.ipr
 
 # CMake
-app/cmake-build-*/
+cmake-build-*/
 
 # Mongo Explorer plugin
-app/.idea/**/mongoSettings.xml
+.idea/**/mongoSettings.xml
 
 # File-based project format
-app/*.iws
+*.iws
 
 # IntelliJ
-app/out/
+out/
 
 # mpeltonen/sbt-idea plugin
-app/.idea_modules/
+.idea_modules/
 
 # JIRA plugin
-app/atlassian-ide-plugin.xml
+atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-app/.idea/replstate.xml
+.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-app/com_crashlytics_export_strings.xml
-app/crashlytics.properties
-app/crashlytics-build.properties
-app/fabric.properties
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
 
 # Editor-based Rest Client
-app/.idea/httpRequests
+.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
-app/.idea/caches/build_file_checksums.ser
+.idea/caches/build_file_checksums.ser
 
 ### Java template
 # Compiled class file
-app/*.class
+*.class
 
 # Log file
-app/*.log
+*.log
 
 # BlueJ files
-app/*.ctxt
+*.ctxt
 
 # Mobile Tools for Java (J2ME)
-app/.mtj.tmp/
+.mtj.tmp/
 
 # Package Files #
-app/*.jar
-app/*.war
-app/*.nar
-app/*.ear
-app/*.zip
-app/*.tar.gz
-app/*.rar
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-app/hs_err_pid*
+hs_err_pid*
 
 ### Maven template
-app/target/
-app/pom.xml.tag
-app/app/pom.xml.releaseBackup
-app/pom.xml.versionsBackup
-app/pom.xml.next
-app/release.properties
-app/dependency-reduced-pom.xml
-app/buildNumber.properties
-app/.mvn/timing.properties
-app/.mvn/wrapper/maven-wrapper.jar
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 

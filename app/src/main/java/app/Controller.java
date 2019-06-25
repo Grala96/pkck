@@ -136,12 +136,10 @@ public class Controller {
             File file = fileChooser.showOpenDialog(openFile);
             if (file != null) {
                 this.database = fileController.loadXML(file);
-                if(personTableView.getItems() != null){
-                    personTableView.getItems().clear();
-                }
-                for(PersonType personType : this.database.getPeople().getPerson()){
+                personTableView.getItems().clear();
+                for (PersonType personType : this.database.getPeople().getPerson()) {
                     System.out.println(personType.toString());
-                  personObservableList.add(new Person(personType));
+                    personObservableList.add(new Person(personType));
                 }
                 personTableView.setItems(personObservableList);
             }

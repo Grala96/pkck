@@ -9,8 +9,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public Database database;
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
