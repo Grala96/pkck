@@ -86,20 +86,20 @@ public class Controller {
     private Button peopleResetButton;
 
     @FXML
-    private TableView<PersonView.Person> personTableView = new TableView<>();
+    private TableView<Person> personTableView = new TableView<>();
 
     private FileController fileController = new FileController();
     private Database database = new Database();
 
-    private ObservableList<PersonView.Person> personObservableList = null;
+    private ObservableList<Person> personObservableList = FXCollections.observableList(new ArrayList<>());
 
-    private List<PersonView.Person> converter(List<PersonType> list) {
-        List<PersonView.Person> personList = new ArrayList<>();
-        for (PersonType personType : list) {
-            personList.add(new PersonView.Person(personType));
-        }
-        return personList;
-    }
+//    private List<PersonView.Person> converter(List<PersonType> list) {
+//        List<PersonView.Person> personList = new ArrayList<>();
+//        for (PersonType personType : list) {
+//            personList.add(new PersonView.Person(personType));
+//        }
+//        return personList;
+//    }
 
     @FXML
     void initialize() {
@@ -136,11 +136,13 @@ public class Controller {
             File file = fileChooser.showOpenDialog(openFile);
             if (file != null) {
                 this.database = fileController.loadXML(file);
-                System.out.println(this.database.toString());
                 if(personTableView.getItems() != null){
                     personTableView.getItems().clear();
                 }
-                personObservableList = FXCollections.observableArrayList(converter(this.database.getPeople().getPerson()));
+                for(PersonType personType : this.database.getPeople().getPerson()){
+                    System.out.println(personType.toString());
+                  personObservableList.add(new Person(personType));
+                }
                 personTableView.setItems(personObservableList);
             }
         });
@@ -154,30 +156,63 @@ public class Controller {
                 fileController.saveXML(file, database);
             }
         });
-
-
     }
 
     private void configTableView() {
         personTableView.setEditable(true);
 
+        TableColumn personidCol = new TableColumn("Person ID");
+        personidCol.setMinWidth(100);
+        personidCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("personid"));
+
         TableColumn firstNameCol = new TableColumn("First Name");
         firstNameCol.setMinWidth(100);
         firstNameCol.setCellValueFactory(
-                new PropertyValueFactory<PersonView.Person, String>("firstName"));
+                new PropertyValueFactory<Person, String>("firstname"));
+
+        TableColumn middleNameCol = new TableColumn("Middle Name");
+        middleNameCol.setMinWidth(100);
+        middleNameCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("middlename"));
 
         TableColumn lastNameCol = new TableColumn("Last Name");
         lastNameCol.setMinWidth(100);
         lastNameCol.setCellValueFactory(
-                new PropertyValueFactory<PersonView.Person, String>("lastName"));
+                new PropertyValueFactory<Person, String>("lastname"));
 
-        TableColumn emailCol = new TableColumn("Email");
-        emailCol.setMinWidth(200);
-        emailCol.setCellValueFactory(
-                new PropertyValueFactory<PersonView.Person, String>("email"));
+        TableColumn birthdayCol = new TableColumn("Birthday");
+        birthdayCol.setMinWidth(150);
+        birthdayCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("birthday"));
+
+        TableColumn heightCol = new TableColumn("Height");
+        heightCol.setMinWidth(100);
+        heightCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("height"));
+
+        TableColumn heightUnitCol = new TableColumn("Height Unit");
+        heightUnitCol.setMinWidth(100);
+        heightUnitCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("heightUnit"));
+
+        TableColumn weightCol = new TableColumn("Weight");
+        weightCol.setMinWidth(100);
+        weightCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("weight"));
+
+        TableColumn weightUnitCol = new TableColumn("Birthday");
+        weightUnitCol.setMinWidth(100);
+        weightUnitCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("weightUnit"));
+
+        TableColumn companyidCol = new TableColumn("Company ID");
+        companyidCol.setMinWidth(100);
+        companyidCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("companyid"));
 
         personTableView.setItems(personObservableList);
-        personTableView.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+        personTableView.getColumns().addAll(personidCol, firstNameCol, middleNameCol, lastNameCol, birthdayCol, heightCol, heightUnitCol, weightCol, weightUnitCol, companyidCol);
     }
 
 
