@@ -37,7 +37,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <SplitPane dividerPositions="0.75" layoutX="285.0" layoutY="245.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <SplitPane dividerPositions="0.6474719101123596" layoutX="285.0" layoutY="245.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
@@ -57,6 +57,7 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
@@ -74,12 +75,14 @@
                                                 <TextField fx:id="peopleInputWeightUnit" promptText="Weight Unit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                 <TextField fx:id="peopleInputBirthday" promptText="Birthday" GridPane.rowIndex="4" />
                                                 <TextField fx:id="peopleInputCompanyId" promptText="Company ID" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                <Button fx:id="peopleAddButton" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                <Button fx:id="peopleAddButton" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                    <GridPane.margin>
                                                       <Insets />
                                                    </GridPane.margin>
                                                 </Button>
-                                                <Button fx:id="peopleResetButton" mnemonicParsing="false" text="Reset" GridPane.rowIndex="5" />
+                                                <Button fx:id="peopleResetButton" mnemonicParsing="false" text="Reset" GridPane.rowIndex="6" />
+                                                <TextField fx:id="peopleInputHouseId" promptText="House ID" GridPane.rowIndex="5" />
+                                                <TextField fx:id="peopleInputPosition" promptText="Position" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                                              </children>
                                              <padding>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

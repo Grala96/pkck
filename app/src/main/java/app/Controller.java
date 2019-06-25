@@ -10,9 +10,12 @@ import data.Database;
 import data.PersonType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -74,6 +77,12 @@ public class Controller {
     private TextField peopleInputCompanyId;
 
     @FXML
+    TextField peopleInputHouseId;
+
+    @FXML
+    TextField peopleInputPosition;
+
+    @FXML
     private Button peopleAddButton;
 
     @FXML
@@ -90,26 +99,6 @@ public class Controller {
     @FXML
     void initialize() {
         configTableView();
-
-        assert headVBox != null : "fx:id=\"headVBox\" was not injected: check your FXML file 'sample.fxml'.";
-        assert menuBar != null : "fx:id=\"menuBar\" was not injected: check your FXML file 'sample.fxml'.";
-        assert menuBar_menu != null : "fx:id=\"menuBar_menu\" was not injected: check your FXML file 'sample.fxml'.";
-        assert menuOpen != null : "fx:id=\"menuOpen\" was not injected: check your FXML file 'sample.fxml'.";
-        assert menuSaveAs != null : "fx:id=\"menuSaveAs\" was not injected: check your FXML file 'sample.fxml'.";
-        assert menuQuit != null : "fx:id=\"menuQuit\" was not injected: check your FXML file 'sample.fxml'.";
-        assert personTableView != null : "fx:id=\"personTableView\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputPersonId != null : "fx:id=\"peopleInputPersonId\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputHeight != null : "fx:id=\"peopleInputHeight\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputFirstname != null : "fx:id=\"peopleInputFirstname\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputHeightUnit != null : "fx:id=\"peopleInputHeightUnit\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputMiddlename != null : "fx:id=\"peopleInputMiddlename\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputWeight != null : "fx:id=\"peopleInputWeight\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputLastname != null : "fx:id=\"peopleInputLastname\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputWeightUnit != null : "fx:id=\"peopleInputWeightUnit\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputBirthday != null : "fx:id=\"peopleInputBirthday\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleInputCompanyId != null : "fx:id=\"peopleInputCompanyId\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleAddButton != null : "fx:id=\"peopleAddButton\" was not injected: check your FXML file 'sample.fxml'.";
-        assert peopleResetButton != null : "fx:id=\"peopleResetButton\" was not injected: check your FXML file 'sample.fxml'.";
 
         menuQuit.setOnAction(e -> System.exit(0));
 
@@ -137,6 +126,37 @@ public class Controller {
             if (file != null) {
                 fileController.saveXML(file, database);
             }
+        });
+
+        peopleAddButton.setOnAction(e -> {
+            Person person = new Person(
+                    peopleInputPersonId.getText(),
+                    peopleInputHeight.getText(),
+                    peopleInputFirstname.getText(),
+                    peopleInputHeightUnit.getText(),
+                    peopleInputMiddlename.getText(),
+                    peopleInputWeight.getText(),
+                    peopleInputLastname.getText(),
+                    peopleInputWeightUnit.getText(),
+                    peopleInputBirthday.getText(),
+                    peopleInputCompanyId.getText(),
+                    peopleInputHouseId.getText(),
+                    peopleInputPosition.getText()
+            );
+            personObservableList.add(person);
+            database.getPeople().getPerson().add(person.mapToPersonType());
+            peopleInputPersonId.clear();
+            peopleInputHeight.clear();
+            peopleInputFirstname.clear();
+            peopleInputHeightUnit.clear();
+            peopleInputMiddlename.clear();
+            peopleInputWeight.clear();
+            peopleInputLastname.clear();
+            peopleInputWeightUnit.clear();
+            peopleInputBirthday.clear();
+            peopleInputCompanyId.clear();
+            peopleInputHouseId.clear();
+            peopleInputPosition.clear();
         });
     }
 
@@ -193,8 +213,19 @@ public class Controller {
         companyidCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("companyid"));
 
+        TableColumn houseidCol = new TableColumn("House ID");
+        houseidCol.setMinWidth(100);
+        houseidCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("houseid"));
+
+        TableColumn positionCol = new TableColumn("Position");
+        positionCol.setMinWidth(100);
+        positionCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("position"));
+
         personTableView.setItems(personObservableList);
-        personTableView.getColumns().addAll(personidCol, firstNameCol, middleNameCol, lastNameCol, birthdayCol, heightCol, heightUnitCol, weightCol, weightUnitCol, companyidCol);
+        personTableView.getColumns().addAll(personidCol, firstNameCol, middleNameCol, lastNameCol, birthdayCol,
+                heightCol, heightUnitCol, weightCol, weightUnitCol, companyidCol, houseidCol, positionCol);
     }
 
 
